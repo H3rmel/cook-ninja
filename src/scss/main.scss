@@ -1,6 +1,20 @@
 // Changes goes here, above the @import of bootstrap lib (if not, its not gonna have any effect)
-@import "./modules/globals.scss";
-@import "./modules/colors.scss";
+// Import functions first (so you can use them)
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Redefine variables here, because its not depend on anything else
+@import "./modules/variables.scss";
+
+// Import variables and mixins (so you can use them below)
+// any redefined vars above will be incorporated into the files (e.g. in maps)
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// anything that depends on variables/mixins file is defined below
+.btn-truncate {
+  max-width: 100px;
+  @include text-truncate;
+}
 
 // Bootstrap Lib
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
