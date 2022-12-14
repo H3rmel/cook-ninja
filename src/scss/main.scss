@@ -16,5 +16,16 @@
   @include text-truncate;
 }
 
+// add colors to theme
+$custom-colors: (
+  "primary-light": #fff8fb,
+  "secondary-light": #f6fffb,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// remove color from theme colors
+$theme-colors: map-remove($theme-colors, "danger");
+
 // Bootstrap Lib
 @import "../../node_modules/bootstrap/scss/bootstrap";
