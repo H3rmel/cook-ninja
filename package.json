@@ -1,0 +1,27 @@
+{
+  "name": "cook-ninja",
+  "version": "1.0.0",
+  "description": "bootstrap 5 customizing course from net ninja",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H3rmel/cook-ninja.git"
+  },
+  "keywords": [
+    "bootstrap5",
+    "html5",
+    "css3"
+  ],
+  "author": "Isaac Hermel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/H3rmel/cook-ninja/issues"
+  },
+  "homepage": "https://github.com/H3rmel/cook-ninja#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
