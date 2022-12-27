@@ -108,7 +108,7 @@ $border-widths: (
   2: 3px,
   3: 5px,
   4: 7px,
-  5: 9px
+  5: 9px,
 );
 
 $border-color: $primary;
@@ -132,7 +132,7 @@ $custom-utilities: (
       140: rotate(140deg),
       160: rotate(160deg),
       180: rotate(180deg),
-    )
+    ),
   ),
   "opacity": (
     property: opacity,
@@ -140,15 +140,35 @@ $custom-utilities: (
     state: hover,
     values: (
       0: 0,
-      25: .25,
-      50: .50,
-      75: .75,
+      25: 0.25,
+      50: 0.5,
+      75: 0.75,
       100: 1,
-    )
+    ),
   ),
 );
 
 $utilities: map-merge($utilities, $custom-utilities);
+
+// modifying utilities
+$modified-utilities: (
+  "border-bottom": (
+    property: border-bottom,
+    values: (
+      null: $border-width dotted $border-color,
+      0: 0,
+    ),
+  ),
+  "display":
+    map-merge(
+      map-get($utilities, "display"),
+      (
+        class: dis,
+      )
+    ),
+);
+
+$utilities: map-merge($utilities, $modified-utilities);
 
 // Bootstrap Lib
 @import "../../node_modules/bootstrap/scss/bootstrap";
