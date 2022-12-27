@@ -1,3 +1,5 @@
+// Imports
+@import url(https://fonts.googleapis.com/css?family=Sora:100,200,300,regular,500,600,700,800);
 // Changes goes here, above the @import of bootstrap lib (if not, its not gonna have any effect)
 // Import functions first (so you can use them)
 @import "../../node_modules/bootstrap/scss/functions";
@@ -48,6 +50,25 @@ $theme-colors: map-remove($theme-colors, "danger");
     color: shade-color($value, 30%);
   }
 }
+
+// font family
+$font-family-base: "Sora", sans-serif;
+
+// font sizes
+$font-size-base: 1rem;
+$lead-font-size: $font-size-base * 1.5;
+
+// headings
+$headings-font-weight: 300;
+$headings-line-height: 1.5;
+$h1-font-size: $font-size-base * 2.75;
+
+// display headings
+$custom-display-font-sizes: (
+  7: 2rem,
+);
+
+$display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
 
 // Bootstrap Lib
 @import "../../node_modules/bootstrap/scss/bootstrap";
