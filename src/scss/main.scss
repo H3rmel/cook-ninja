@@ -32,7 +32,7 @@ $theme-colors: map-remove($theme-colors, "danger");
 // add color from theme colors
 @each $color, $value in $colors {
   .bg-#{$color} {
-    background-color: $value
+    background-color: $value;
   }
   .bg-#{$color}-light {
     background-color: tint-color($value, 80%);
@@ -41,7 +41,7 @@ $theme-colors: map-remove($theme-colors, "danger");
     background-color: shade-color($value, 30%);
   }
   .text-#{$color} {
-    color: $value
+    color: $value;
   }
   .text-#{$color}-light {
     color: tint-color($value, 80%);
@@ -69,6 +69,14 @@ $custom-display-font-sizes: (
 );
 
 $display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
+
+// links
+$link-color: $secondary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+$link-shade-percentage: 30%;
+// Why he is editing this if it's the default? 🤔
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
 
 // Bootstrap Lib
 @import "../../node_modules/bootstrap/scss/bootstrap";
